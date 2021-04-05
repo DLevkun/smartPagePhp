@@ -1,0 +1,437 @@
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/exo2/v10/7cH1v4okm5zmbvwkAx_sfcEuiD8j4PKcPg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/exo2/v10/7cH1v4okm5zmbvwkAx_sfcEuiD8jvvKcPg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/exo2/v10/7cH1v4okm5zmbvwkAx_sfcEuiD8jjPKcPg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/exo2/v10/7cH1v4okm5zmbvwkAx_sfcEuiD8jWfWcPg.ttf) format('truetype');
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+h4 {
+  text-align: center;
+  font-size: 27px;
+}
+h5 {
+  font-size: 20px;
+}
+h6 {
+  font-size: 16px;
+}
+h5,
+h6 {
+  font-weight: 600;
+  color: #005877;
+}
+.container {
+  max-width: 1517px;
+  margin: 0 auto;
+  padding: 75px;
+}
+.header {
+  position: relative;
+  /*max-width: 1290px;*/
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.header .logo img {
+  width: 200px;
+}
+.header #menu-toggle {
+  display: none;
+}
+.header .burger {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 47px;
+  right: 76px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.header .burger > span,
+.header .burger > span::before,
+.header .burger > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  border-radius: 25px;
+  background-color: #264653;
+  transition: all 0.5s ease;
+}
+.header .burger > span::before {
+  content: "";
+  top: -16px;
+}
+.header .burger > span::after {
+  content: "";
+  top: 16px;
+}
+.header .menu {
+  font-weight: 300;
+  margin: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 29px;
+}
+.header .menu div a {
+  border-radius: 25px;
+  padding: 8px 18px 11px 18px;
+  transition: 0.6s all ease;
+}
+.header .menu div a:hover {
+  color: white;
+}
+.header .menu .books a {
+  background-color: #feba21;
+  font-weight: 500;
+  color: white;
+}
+.header .menu .main a:hover {
+  background-color: #005877;
+}
+.header .menu .audio a:hover {
+  background-color: #f4a261;
+}
+.header .menu .top a:hover {
+  background-color: #e44a24;
+}
+.header .icons {
+  margin-left: 233px;
+  align-items: center;
+  display: flex;
+}
+.header .icons img {
+  width: 40px;
+}
+.header .icons .account a {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+.header .icons .account a img {
+  position: absolute;
+  width: 45px;
+  padding-left: 3px;
+}
+.header .icons .account a #account {
+  display: none;
+}
+.header .icons .saved {
+  margin-left: 30px;
+}
+.header .icons .saved a {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+.header .icons .saved a img {
+  position: absolute;
+  /*top: -6px;*/
+  transition: all 0.4s ease;
+}
+.header .icons .saved a #heart-hover {
+  opacity: 0;
+}
+.header .icons .saved a:hover #heart {
+  opacity: 0;
+}
+.header .icons .saved a:hover #heart-hover {
+  opacity: 1;
+}
+.book .container {
+  background-color: #feba21;
+}
+.book .container .book-wrap {
+  background-color: white;
+}
+.book .container .book-wrap .book-route {
+  padding-top: 75px;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.book .container .book-wrap .book-route .route {
+  padding-top: 5px;
+  margin-bottom: 96px;
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 200;
+}
+.book .container .book-wrap .book-title {
+  margin-bottom: 62px;
+}
+.book .container .book-wrap .book-title h1,
+.book .container .book-wrap .book-title h2 {
+  text-align: center;
+  font-weight: 900;
+}
+.book .container .book-wrap .book-title .author {
+  font-size: 48px;
+}
+.book .container .book-wrap .book-title .title {
+  font-size: 40px;
+}
+.book .container .book-wrap .book-prop {
+  padding: 0 75px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.book .container .book-wrap .book-prop .book-charach {
+  padding-top: 16px;
+}
+.book .container .book-wrap .book-prop .book-charach h4 {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+.book .container .book-wrap .book-prop .book-charach div {
+  margin-bottom: 20px;
+}
+.book .container .book-wrap .book-prop .book-charach .rating-wrap {
+  width: 412px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.book .container .book-wrap .book-prop .book-charach .rating-wrap .stars {
+  margin: 0;
+}
+.book .container .book-wrap .book-prop .book-charach .rating-wrap .stars img {
+  margin-right: 10px;
+}
+.book .container .book-wrap .book-prop .book-charach .num-of-pages .pages {
+  color: #005877;
+  margin-left: 10px;
+  font-size: 28px;
+}
+.book .container .book-wrap .book-prop .book-charach .contents h4 {
+  transition: all 0.5s ease;
+}
+.book .container .book-wrap .book-prop .book-charach .contents h4 a img {
+  position: relative;
+  top: 7px;
+}
+.book .container .book-wrap .book-prop .book-charach .contents:hover h4 {
+  transform: scale(1.2, 1.2);
+}
+.book .container .book-wrap .book-prop .book-charach .add-to-saved h4 {
+  transition: all 0.5s ease;
+}
+.book .container .book-wrap .book-prop .book-charach .add-to-saved h4 a img {
+  position: relative;
+  top: 7px;
+}
+.book .container .book-wrap .book-prop .book-charach .add-to-saved:hover h4 {
+  transform: scale(1.2, 1.2);
+}
+.book .container .book-wrap .book-prop .book-func {
+  width: 419px;
+  margin: 0 auto;
+}
+.book .container .book-wrap .book-prop .book-func div {
+  margin-bottom: 15px;
+}
+.book .container .book-wrap .book-prop .book-func a {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 100px;
+  padding: 20px 0;
+  width: 419px;
+  transition: all 0.5s ease;
+}
+.book .container .book-wrap .book-prop .book-func .read a {
+  border: 3px solid #2a9d8f;
+  color: #2a9d8f;
+}
+.book .container .book-wrap .book-prop .book-func .read a:hover {
+  background-color: #2a9d8f;
+  color: white;
+}
+.book .container .book-wrap .book-prop .book-func .download a {
+  border: 3px solid #e44a24;
+  color: #e44a24;
+}
+.book .container .book-wrap .book-prop .book-func .download a:hover {
+  background-color: #e44a24;
+  color: white;
+}
+.book .container .book-wrap .book-prop .book-func .listen a {
+  border: 3px solid #feba21;
+  color: #feba21;
+}
+.book .container .book-wrap .book-prop .book-func .listen a:hover {
+  background-color: #feba21;
+  color: white;
+}
+.book .container .book-wrap .book-info {
+  height: 440px;
+  margin: 75px 0;
+  padding: 0 75px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+.book .container .book-wrap .book-info .book-descrip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+.book .container .book-wrap .book-info .book-descrip h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 36px;
+}
+.book .container .book-wrap .book-info .book-descrip h3,
+.book .container .book-wrap .book-info .book-descrip .chapter,
+.book .container .book-wrap .book-info .book-descrip .text-descrip {
+  flex-grow: 1;
+}
+.book .container .book-wrap .book-info .book-descrip .text-descrip {
+  margin-top: 16px;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 100px;
+  width: 566px;
+}
+.book .container .book-wrap .book-info .book-image {
+  text-align: center;
+}
+.book .container .book-wrap .author-info {
+  height: 460px;
+  background-color: #f7f7f7;
+  padding: 0 75px;
+  display: flex;
+}
+.book .container .book-wrap .author-info .author {
+  padding: 75px 0 75px 57px;
+}
+.book .container .book-wrap .author-info .author a {
+  font-size: 20px;
+  font-weight: 600;
+  color: #005877;
+}
+.book .container .book-wrap .author-info .author .info {
+  display: flex;
+}
+.book .container .book-wrap .author-info .author .info .about h4 {
+  color: #005877;
+}
+.book .container .book-wrap .author-info .author .info .about img {
+  padding-top: 31px;
+}
+.book .container .book-wrap .author-info .author .info .author-text {
+  padding-top: 64px;
+  padding-left: 56px;
+}
+.book .container .book-wrap .author-info .author .info .author-text .text {
+  padding-top: 18px;
+  padding-bottom: 36px;
+  width: 496px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.book .container .book-wrap .author-info .author .info .author-text .all-books h6:after {
+  position: relative;
+  top: 2px;
+  left: 15px;
+  content: url(../img/blue-arrow.png);
+}
+.book .container .book-wrap .author-info .author .info .author-text .all-books:hover h6 {
+  text-decoration: underline;
+}
+.footer .container {
+  background: #264653;
+  display: grid;
+  grid-template-columns: 230px 285px 285px 523px;
+  font-size: 22px;
+  color: white;
+}
+.footer .container p,
+.footer .container h3 {
+  text-align: center;
+}
+.footer .container .foot-logo {
+  margin-top: 52px;
+}
+.footer .container .foot-logo p {
+  font-weight: 300;
+  font-size: 24px;
+}
+.footer .container .info {
+  padding-left: 50px;
+  margin-top: 35px;
+}
+.footer .container .info p,
+.footer .container .info a {
+  color: white;
+  font-weight: 400;
+  line-height: 55px;
+  letter-spacing: 2px;
+}
+.footer .container .contacts {
+  padding-left: 20px;
+}
+.footer .container .contacts h3 {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.footer .container .contacts p {
+  letter-spacing: 2px;
+  line-height: 35px;
+}
+.footer .container .contacts .phone h3 {
+  padding-bottom: 13px;
+}
+.footer .container .contacts .social-net h3 {
+  padding-top: 42px;
+  padding-bottom: 25px;
+}
+.footer .container .contacts .social-net div {
+  width: 281px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
